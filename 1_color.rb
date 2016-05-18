@@ -1,27 +1,40 @@
 require 'artoo'
+require './helper'
+include Helper
 
 connection :sphero, :adaptor => :sphero, :port => '/dev/tty.Sphero-BPO-AMP-SPP'
 device :sphero, :driver => :sphero
 
-def change_colors
-  sphero.set_color(:red)
-  sleep 1
-  sphero.set_color(:green)
-  sleep 1
-  sphero.set_color(:yellow)
-  sleep 1
-  sphero.set_color(:blue)
-  sleep 1
-  sphero.set_color(:white)
-  sleep 1
-  sphero.set_color(160, 32, 240)
-  sleep 1
-end
-
 work do
+  sphero.set_color(:green)
+  hold 8
   sphero.set_color(:red)
-  sleep 5
-  change_colors
-  puts "Finished"
 end
 
+# work do
+#   sphero.set_color(:red)
+#   hold 8
+#   sphero.set_color(:green)
+#   hold 1
+#   sphero.set_color(:yellow)
+#   hold 1
+#   sphero.set_color(:blue)
+#   hold 1
+#   sphero.set_color(:white)
+#   hold 1
+#   sphero.set_color(160, 32, 240)
+#   hold 1
+# end
+
+# work do
+#   sphero.set_color(:red)
+#   hold 5
+#   100.times do
+#     r = rand(255)
+#     g = rand(255)
+#     b = rand(255)
+#     sphero.set_color(r, g, b)
+#     puts "red: #{r}, green: #{g}, blue: #{b}"
+#     hold(0.5)
+#   end
+# end

@@ -23,13 +23,7 @@ end
 
 work do
   calibrate
-
-  # Enter our code for the maze here using:
-  # sphero.roll(speed, direction)
-  # hold(seconds)
-  # sphero.stop
-  # sphero.set_color(color_name or r, g, b)
-  # We can use loops, if / else statements or anything else to make it easier for us.
-
-  print_finished
+  # have the kids write a custom program
+  # that will drive Sphero through the
+  # maze that is created by tape on the floor.
 end

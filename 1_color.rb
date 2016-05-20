@@ -5,11 +5,18 @@ include Helper
 connection :sphero, :adaptor => :sphero, :port => '/dev/tty.Sphero-BPO-AMP-SPP'
 device :sphero, :driver => :sphero
 
-work do
-  sphero.set_color(:green)
-  hold 8
-  sphero.set_color(:red)
-end
+# A simple example of showing how
+# we can change the color of Sphero.
+
+# work do
+#   sphero.set_color(:green)
+#   hold 8
+#   sphero.set_color(:red)
+# end
+
+# A simple example of cycling through
+# colors that Artoo understands by
+# symbol and also passing in a RGB value.
 
 # work do
 #   sphero.set_color(:red)
@@ -25,6 +32,10 @@ end
 #   sphero.set_color(160, 32, 240)
 #   hold 1
 # end
+
+# An example of changing random colors
+# by assigning a var to each r, g, and b
+# value.
 
 # work do
 #   sphero.set_color(:red)
